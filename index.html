@@ -6,41 +6,31 @@
     <script src="https://p.trellocdn.com/power-up.min.js"></script>
 </head>
 <body>
-
-<script>
-window.TrelloPowerUp.initialize({
-
-    "board-buttons": function (t, opts) {
-        return [{
-            icon: {
-                dark: "./icon-light.svg",
-                light: "./icon-dark.svg"
+    <script>
+        window.TrelloPowerUp.initialize({
+            "board-buttons": function (t, opts) {
+                return [{
+                    text: "📊",
+                    callback: function (t) {
+                        return t.modal({
+                            url: "./report.html",
+                            fullscreen: true,
+                            title: "BenchTV — Task Reports",
+                        });
+                    }
+                }];
             },
-            text: "Reports",
-
-            callback: function (t) {
-                return t.modal({
-                    url: "./report.html",
-                    fullscreen: true,
-                    title: "BenchTV — Task Reports"
+            "show-settings": function (t, opts) {
+                return t.popup({
+                    title: "BenchTV Reports — Settings",
+                    url: "./settings.html",
+                    height: 200
                 });
             }
-        }];
-    },
-
-    "show-settings": function (t, opts) {
-        return t.popup({
-            title: "BenchTV Reports — Settings",
-            url: "./settings.html",
-            height: 200
+        }, {
+            appName: "BenchTV Reports",
+            appKey: "" 
         });
-    }
-
-}, {
-    appName: "BenchTV Reports",
-    appKey: ""
-});
-</script>
-
+    </script>
 </body>
 </html>
