@@ -1,25 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>BenchTV Reports Connector</title>
     <script src="https://p.trellocdn.com/power-up.min.js"></script>
 </head>
-
 <body>
     <script>
-        var ICON_LIGHT = "data:image/svg+xml;utf8," + encodeURIComponent(
-            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M6 2.5h9l4.5 4.5V21a.5.5 0 0 1-.5.5H6a.5.5 0 0 1-.5-.5V3a.5.5 0 0 1 .5-.5Z" stroke="%23F2A93B" stroke-width="1.6" stroke-linejoin="round"/><path d="M15 2.5V7a.5.5 0 0 0 .5.5H19.5" stroke="%23F2A93B" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 12h7M8.5 15h7M8.5 18h4.5" stroke="%23F2A93B" stroke-width="1.6" stroke-linecap="round"/></svg>'
-        );
-        var ICON_DARK = "data:image/svg+xml;utf8," + encodeURIComponent(
-            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M6 2.5h9l4.5 4.5V21a.5.5 0 0 1-.5.5H6a.5.5 0 0 1-.5-.5V3a.5.5 0 0 1 .5-.5Z" stroke="%2314181C" stroke-width="1.6" stroke-linejoin="round"/><path d="M15 2.5V7a.5.5 0 0 0 .5.5H19.5" stroke="%2314181C" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 12h7M8.5 15h7M8.5 18h4.5" stroke="%2314181C" stroke-width="1.6" stroke-linecap="round"/></svg>'
-        );
-
         window.TrelloPowerUp.initialize({
             "board-buttons": function (t, opts) {
                 return [{
-                    icon: {dark: ICON_DARK, light: ICON_LIGHT},
                     text: "📊",
                     callback: function (t) {
                         return t.modal({
@@ -43,5 +33,4 @@
         });
     </script>
 </body>
-
 </html>
